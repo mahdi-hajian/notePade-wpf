@@ -7,18 +7,21 @@
         mc:Ignorable="d"
         Title="Note Pad" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid x:Name="grid1">
-        <Menu VerticalAlignment="Top">
-            <MenuItem  Name="File" Header="File" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal">
-                <MenuItem Name="New" Header="New" Height="34" Cursor="Hand" FontSize="16" FontWeight="Normal" Click="New_Click"/>
-                <MenuItem Name="Open" Header="Open" Height="34" Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Open_Click"/>
-                <MenuItem Name="Save" Header="Save" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Save_Click"/>
-                <MenuItem Name="Exite" Header="Exit" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Exit_Click"  FlowDirection="LeftToRight" />
-            </MenuItem>
-            <MenuItem Name="Edit" Header="Edit" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal">
-                <MenuItem Name="RedColor" Header="RedColor" Height="34"  Cursor="Hand" FontSize="16" Icon="" FontWeight="Normal" Click="Red_Click"/>
-                <MenuItem Name="YellowColor" Header="YellowColor" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Yellow_Click"/>
-            </MenuItem>
-        </Menu>
-        <TextBox x:Name="txt1" HorizontalAlignment="Center" Margin="0,33,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" Height="401"/>
+        <DockPanel LastChildFill="True">
+                <Menu  DockPanel.Dock="Top">
+                    <MenuItem  Name="File" Header="File" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal">
+                        <MenuItem Name="New" Header="New" Height="34" Cursor="Hand" FontSize="16" FontWeight="Normal" Click="New_Click"/>
+                        <MenuItem Name="Open" Header="Open" Height="34" Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Open_Click"/>
+                        <MenuItem Name="Save" Header="Save" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Save_Click"/>
+                        <MenuItem Name="Exite" Header="Exit" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Exit_Click"  FlowDirection="LeftToRight" />
+                    </MenuItem>
+                    <MenuItem Name="Edit" Header="Edit" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal">
+                        <MenuItem Name="RedColor" Header="RedColor" Height="34"  Cursor="Hand" FontSize="16" Icon="" FontWeight="Normal" Click="Red_Click"/>
+                        <MenuItem Name="YellowColor" Header="YellowColor" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Yellow_Click"/>
+                    </MenuItem>
+                <MenuItem Name="NextPage" Header="برو به صفحه بعد" Click="Button_Click"/>
+                </Menu>
+            <TextBox x:Name="txt1" Text="salam" DockPanel.Dock="Bottom"/>
+        </DockPanel>
     </Grid>
 </Window>

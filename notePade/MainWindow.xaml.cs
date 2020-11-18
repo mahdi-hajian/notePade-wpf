@@ -68,5 +68,11 @@ namespace notePade
             if (saveFile.SafeFileName != "")
                 System.IO.File.WriteAllText(saveFile.FileName, txt1.Text);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new Window1().Show();
+            this.Close();
+        }
     }
 }
