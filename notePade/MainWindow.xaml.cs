@@ -24,5 +24,49 @@ namespace notePade
         {
             InitializeComponent();
         }
+
+        private void New_Click(object sender, RoutedEventArgs e)
+        {
+            txt1.Text = "";
+        }
+
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog openFile = new Microsoft.Win32.OpenFileDialog
+            {
+                Filter = "text file|*.txt",
+                Title = "لطفا فایلی انتخاب کنید"
+            };
+            openFile.ShowDialog();
+            if (openFile.SafeFileName != "")
+            txt1.Text = System.IO.File.ReadAllText (openFile.FileName);
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Red_Click(object sender, RoutedEventArgs e)
+        {
+            txt1.Background = Brushes.Red;
+        }
+
+        private void Yellow_Click(object sender, RoutedEventArgs e)
+        {
+            txt1.Background = Brushes.Yellow;
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog saveFile = new Microsoft.Win32.SaveFileDialog
+            {
+                Filter = "text file|*.txt",
+                Title = "محل ذخیره فایل را انخاب کنید"
+            };
+            saveFile.ShowDialog();
+            if (saveFile.SafeFileName != "")
+                System.IO.File.WriteAllText(saveFile.FileName, txt1.Text);
+        }
     }
 }

@@ -1,12 +1,24 @@
-﻿<Window x:Class="notePade.MainWindow"
+﻿<Window x:Name="win1" x:Class="notePade.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:notePade"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Note Pad" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="grid1">
+        <Menu VerticalAlignment="Top">
+            <MenuItem  Name="File" Header="File" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal">
+                <MenuItem Name="New" Header="New" Height="34" Cursor="Hand" FontSize="16" FontWeight="Normal" Click="New_Click"/>
+                <MenuItem Name="Open" Header="Open" Height="34" Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Open_Click"/>
+                <MenuItem Name="Save" Header="Save" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Save_Click"/>
+                <MenuItem Name="Exite" Header="Exit" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Exit_Click"  FlowDirection="LeftToRight" />
+            </MenuItem>
+            <MenuItem Name="Edit" Header="Edit" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal">
+                <MenuItem Name="RedColor" Header="RedColor" Height="34"  Cursor="Hand" FontSize="16" Icon="" FontWeight="Normal" Click="Red_Click"/>
+                <MenuItem Name="YellowColor" Header="YellowColor" Height="34"  Cursor="Hand" FontSize="16" FontWeight="Normal" Click="Yellow_Click"/>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="txt1" HorizontalAlignment="Center" Margin="0,33,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" Height="401"/>
     </Grid>
 </Window>
