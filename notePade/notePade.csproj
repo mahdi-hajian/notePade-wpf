@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="2.3.4" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="4.8.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0-ci2265" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />

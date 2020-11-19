@@ -42,6 +42,7 @@ namespace notePade
 
         private int _id;
 
+        [DisplayName("آیدی")]
         public int ID
         {
             get { return _id; }
@@ -51,7 +52,7 @@ namespace notePade
                 NotifyPropertyChanged("ID");
             }
         }
-        [Display(Name ="نام")]
+        [DisplayName("نام")]
         public string Name { get; set; }
         [DisplayName("تلفن")]
         public string Tel { get; set; }

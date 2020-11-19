@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,11 +31,15 @@ namespace notePade
         {
             PersonelViewModel personelViewModel = new PersonelViewModel();
             dgone.ItemsSource = personelViewModel.Personels.ToList();
+            foreach (var item in dgone.Columns)
+            {
+                MemberInfo property = typeof(PersonelViewModel).GetProperty(item.Header.ToString());
+                var attribute = property.GetCustomAttributes(typeof(DisplayNameAttribute))
+                      .Cast<DisplayNameAttribute>().FirstOrDefault();
+                string displayName = attribute.DisplayName;
+                item.Header = displayName;
+            }
         }
 
-        private void dgone_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }
