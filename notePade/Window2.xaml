@@ -5,7 +5,7 @@
                  xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
                  xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                 Title="MainWindow"
+                 Title="جستجوی کاربران"
                  Width="800"
                  Height="450"
                  GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
@@ -44,6 +44,14 @@
     </mah:MetroWindow.RightWindowCommands>
 
     <Grid>
+        <Label Content=": کد" HorizontalAlignment="Left" Margin="511,94,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="B Nazanin"/>
+        <TextBox x:Name="TextCode" HorizontalAlignment="Left" Margin="216,99,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" TextAlignment="Right" Height="26" FontSize="14" FontFamily="B Nazanin"/>
+        <Label Content=": نام" HorizontalAlignment="Left" Margin="511,166,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="B Nazanin"/>
+        <TextBox x:Name="TextName" HorizontalAlignment="Left" Margin="216,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" TextAlignment="Right" Height="26" FontSize="14" FontFamily="B Nazanin"/>
+        <Label Content=": آدرس" HorizontalAlignment="Left" Margin="511,252,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="B Nazanin"/>
+        <TextBox x:Name="TextAddress" HorizontalAlignment="Left" Margin="216,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" TextAlignment="Right" Height="26" FontSize="14" FontFamily="B Nazanin"/>
+        <Label Content=": تلفن" HorizontalAlignment="Left" Margin="511,324,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="B Nazanin"/>
+        <TextBox x:Name="TextTelephpne" HorizontalAlignment="Left" Margin="216,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" TextAlignment="Right" Height="26" FontSize="14" FontFamily="B Nazanin"/>
         <!--  Your content  -->
     </Grid>
 </mah:MetroWindow>

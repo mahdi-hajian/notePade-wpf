@@ -1,0 +1,25 @@
+﻿<Window x:Class="notePade.PersonelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:notePade"
+        mc:Ignorable="d"
+        Title="PersonelWindow" Height="467" Width="800" Loaded="Window_Loaded" ResizeMode="CanMinimize">
+    <Window.DataContext>
+        <local:PersonelViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Label Content=": کد" HorizontalAlignment="Left" Margin="500,30,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="B Nazanin"/>
+        <TextBox x:Name="TextCode" HorizontalAlignment="Left" Margin="250,30,0,0" Text="{Binding ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" TextAlignment="Right" Height="26" FontSize="14" FontFamily="B Nazanin"/>
+        <Grid DataContext="{Binding Personel}" Margin="0,56,0,0" >
+            <Label Content=": نام" Margin="500,20,0,0" FontSize="14" FontWeight="Bold" FontFamily="B Nazanin" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox x:Name="TextName" Text="{Binding Name}" Margin="250,20,0,0" TextWrapping="Wrap" Width="222" TextAlignment="Right" Height="26" FontSize="14" FontFamily="B Nazanin" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Label Content=": آدرس" Margin="500,70,0,0" FontSize="14" FontWeight="Bold" FontFamily="B Nazanin" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox x:Name="TextAddress" Text="{Binding Address}" Margin="250,70,0,0" TextWrapping="Wrap" Width="222" TextAlignment="Right" Height="26" FontSize="14" FontFamily="B Nazanin" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Label Content=": تلفن" Margin="500,120,0,0" FontSize="14" FontWeight="Bold" FontFamily="B Nazanin" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox x:Name="TextTelephpne" Text="{Binding Tel}" Margin="250,120,0,0" TextWrapping="Wrap" Width="222" TextAlignment="Right" Height="26" FontSize="14" FontFamily="B Nazanin" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </Grid>
+        <DataGrid x:Name="dgone" Margin="0,256,0,0" FlowDirection="RightToLeft"/>
+    </Grid>
+</Window>
